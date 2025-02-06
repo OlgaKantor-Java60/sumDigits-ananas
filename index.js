@@ -22,7 +22,8 @@ console.log(`sumDigits(123.3333) = ${sumDigits(123.3333)}`);
 
 
 function displayAnanas1() {
-  return console.log(`a${(+'as')}as`);
+  let aas = +'as';
+  return console.log(`a${aas}as`.toLowerCase());
 }
 
 function displayAnanas2() {
