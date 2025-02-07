@@ -4,13 +4,13 @@ function sumDigits(num) {
   num = Math.round(+num);
   if (num < 0) num = -num;
   let sum = 0;
-    digit = 0;
+  let digit = 0;
   while (num > 0) {
     digit = num % 10;
     sum += digit;
-    num /= 10;
+    num=Math.floor(num/10);
   }
-  return Math.floor(sum);
+  return sum;
 }
 
 console.log(`sumDigits(123) = ${sumDigits(123)}`);
@@ -19,6 +19,7 @@ console.log(`sumDigits('a123') = ${sumDigits('a123')}`);
 console.log(`sumDigits('123a') = ${sumDigits('123a')}`);
 console.log(`sumDigits(-123) = ${sumDigits(-123)}`);
 console.log(`sumDigits(123.3333) = ${sumDigits(123.3333)}`);
+console.log(`sumDigits(1111111111) = ${sumDigits(1111111111)}`);
 
 
 function displayAnanas1() {
